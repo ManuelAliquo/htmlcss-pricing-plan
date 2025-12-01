@@ -1,5 +1,36 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Utils */
+
+.debug,
+.debug > * {
+  border: 2px dashed red;
+  padding: 5px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+/* Layout */
+header .container {
+  height: 80px;
+}
+
+main .container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: aqua;
+  height: 600px;
+  min-width: calc(100% / 3 - 20px * 2 / 3);
 }
