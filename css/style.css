@@ -184,21 +184,22 @@ main > .container {
 }
 
 /* Bonus */
-/* .list-container {
+.list-container {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-left: 10px;
 }
 
 .advantages-list-left {
+  flex-basis: 200px;
   line-height: 1;
-  margin-bottom: 5px;
   font-size: 0.8rem;
 }
 
 .advantages-list-right {
+  flex-basis: 200px;
   line-height: 1;
-  margin-bottom: 10px;
   font-size: 0.8rem;
 }
 
@@ -212,4 +213,4 @@ main > .container {
 
 .list-container i {
   font-size: 1.4rem;
-} */
+}
