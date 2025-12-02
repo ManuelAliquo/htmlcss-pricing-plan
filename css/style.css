@@ -19,6 +19,11 @@ ul {
   list-style-type: none;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 /* Utils */
 body {
   font-family: sans-serif;
@@ -60,28 +65,30 @@ header p {
 
 .time-period {
   margin-right: 5px;
+  cursor: pointer;
 }
 
-.left-header > .selector:first-of-type {
+.left-header > .toggle:first-of-type {
   margin-right: 10px;
 }
 
-.selector {
+.toggle {
   width: 30px;
   height: 18px;
   border: 3px solid #808080;
   border-radius: 20px;
   position: relative;
+  cursor: pointer;
 }
 
-.selector-cursor {
+.toggle-cursor {
   width: 18px;
   height: 18px;
   border: 3px solid #808080;
   border-radius: 20px;
   position: absolute;
-  top: -3px;
-  left: -3px;
+  top: -2px;
+  left: -2px;
 }
 
 /* Main */
@@ -98,7 +105,7 @@ main > .container {
   padding: 25px 20px 30px 20px;
   border: solid transparent;
   border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Inside Card */
@@ -149,18 +156,19 @@ main > .container {
   margin-bottom: 20px;
 }
 
-.advantages-list {
+.benefits-list {
   margin-left: 10px;
 }
 
-.advantages-list > li {
+.benefits-list > li {
   line-height: 1;
   margin-bottom: 10px;
   font-size: 0.8rem;
 }
 
-.advantages-list i {
+.benefits-list i {
   font-size: 1.4rem;
+  margin-right: 10px;
 }
 
 /* Special Card */
@@ -191,14 +199,14 @@ main > .container {
   margin-left: 10px;
 }
 
-.advantages-list-left {
-  flex-basis: 200px;
+.benefits-list-left {
+  flex-grow: 1;
   line-height: 1;
   font-size: 0.8rem;
 }
 
-.advantages-list-right {
-  flex-basis: 200px;
+.benefits-list-right {
+  flex-grow: 1;
   line-height: 1;
   font-size: 0.8rem;
 }
@@ -213,4 +221,59 @@ main > .container {
 
 .list-container i {
   font-size: 1.4rem;
+}
+
+/* extras */
+.card:hover {
+  position: relative;
+  bottom: 5px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.6);
+}
+
+.card {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  bottom: 0;
+  transition: 0.2s;
+}
+
+.choose-btn {
+  position: relative;
+  bottom: 0;
+  transition: 0.2s;
+  box-shadow: 0 0 0;
+}
+
+.choose-btn:hover {
+  position: relative;
+  bottom: 3px;
+  box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.toggle:hover,
+.toggle:hover > .toggle-cursor {
+  border: 3px solid #000;
+  box-shadow: 0 0 5px;
+}
+
+.time-period:hover {
+  color: #000;
+}
+
+.time-period:hover + .toggle {
+  box-shadow: 0 0 5px;
+}
+
+.toggle:focus > .toggle-cursor {
+  position: absolute;
+  top: -2px;
+  left: 9px;
+  transition: left 0.2s;
+  background-color: white;
+  border: 3px solid #000;
+}
+
+.toggle:focus {
+  background-color: #000;
+  border: 3px solid #000;
 }
